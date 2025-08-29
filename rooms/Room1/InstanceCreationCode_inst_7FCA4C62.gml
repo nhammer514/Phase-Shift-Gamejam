@@ -1,0 +1,1 @@
+specialized_phases = [0, 1, 5, 6, 7]
