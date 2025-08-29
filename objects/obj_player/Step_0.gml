@@ -1,6 +1,6 @@
-var _key_left = keyboard_check(vk_left);
-var _key_right = keyboard_check(vk_right);
-var _key_up = keyboard_check_pressed(vk_up);
+var _key_left = keyboard_check(vk_left) || keyboard_check(ord("A"));
+var _key_right = keyboard_check(vk_right)|| keyboard_check(ord("D"));
+var _key_up = keyboard_check_pressed(vk_up) || keyboard_check(ord("W"));
 var _key_control = keyboard_check_pressed(vk_control);
 
 var _on_ground = place_meeting(x,y+1,obj_gamerules.solid_objects);
