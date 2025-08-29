@@ -27,7 +27,9 @@
     {"$GMFolder":"","%Name":"Timelines","folderPath":"folders/Timelines.yy","name":"Timelines","resourceType":"GMFolder","resourceVersion":"2.0",},
   ],
   "ForcedPrefabProjectReferences":[],
-  "IncludedFiles":[],
+  "IncludedFiles":[
+    {"$GMIncludedFile":"","%Name":"Daydream DEMO.otf","CopyToMask":-1,"filePath":"datafiles","name":"Daydream DEMO.otf","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
+  ],
   "isEcma":false,
   "LibraryEmitters":[],
   "MetaData":{
@@ -35,12 +37,16 @@
   },
   "name":"phase-shift",
   "resources":[
+    {"id":{"name":"babafont","path":"fonts/babafont/babafont.yy",},},
     {"id":{"name":"obj_gamerules","path":"objects/obj_gamerules/obj_gamerules.yy",},},
     {"id":{"name":"obj_moon","path":"objects/obj_moon/obj_moon.yy",},},
     {"id":{"name":"obj_obstacle_phase","path":"objects/obj_obstacle_phase/obj_obstacle_phase.yy",},},
     {"id":{"name":"obj_obstacle","path":"objects/obj_obstacle/obj_obstacle.yy",},},
     {"id":{"name":"obj_player","path":"objects/obj_player/obj_player.yy",},},
+    {"id":{"name":"titletext","path":"objects/titletext/titletext.yy",},},
+    {"id":{"name":"MainMenu","path":"rooms/MainMenu/MainMenu.yy",},},
     {"id":{"name":"Room1","path":"rooms/Room1/Room1.yy",},},
+    {"id":{"name":"RoomUI","path":"roomui/RoomUI/RoomUI.yy",},},
     {"id":{"name":"spr_dev_obstacle_gray","path":"sprites/spr_dev_obstacle_gray/spr_dev_obstacle_gray.yy",},},
     {"id":{"name":"spr_dev_obstacle_orange","path":"sprites/spr_dev_obstacle_orange/spr_dev_obstacle_orange.yy",},},
     {"id":{"name":"spr_dev_obstacle_phase_shadow","path":"sprites/spr_dev_obstacle_phase_shadow/spr_dev_obstacle_phase_shadow.yy",},},
@@ -50,6 +56,7 @@
   "resourceType":"GMProject",
   "resourceVersion":"2.0",
   "RoomOrderNodes":[
+    {"roomId":{"name":"MainMenu","path":"rooms/MainMenu/MainMenu.yy",},},
     {"roomId":{"name":"Room1","path":"rooms/Room1/Room1.yy",},},
   ],
   "templateType":"game",
