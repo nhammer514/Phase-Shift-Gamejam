@@ -17,6 +17,8 @@
     {"name":"Timelines","order":8,"path":"folders/Timelines.yy",},
   ],
   "ResourceOrderSettings":[
+    {"name":"mainmenu_loader","order":9,"path":"objects/mainmenu_loader/mainmenu_loader.yy",},
+    {"name":"obj_button","order":8,"path":"objects/obj_button/obj_button.yy",},
     {"name":"obj_gamerules","order":2,"path":"objects/obj_gamerules/obj_gamerules.yy",},
     {"name":"obj_level_end","order":7,"path":"objects/obj_level_end/obj_level_end.yy",},
     {"name":"obj_moon","order":3,"path":"objects/obj_moon/obj_moon.yy",},
@@ -31,5 +33,12 @@
     {"name":"spr_dev_obstacle_phase_shadow","order":4,"path":"sprites/spr_dev_obstacle_phase_shadow/spr_dev_obstacle_phase_shadow.yy",},
     {"name":"spr_dev_player","order":1,"path":"sprites/spr_dev_player/spr_dev_player.yy",},
     {"name":"spr_moon","order":2,"path":"sprites/spr_moon/spr_moon.yy",},
+    {"name":"spr_ui_back","order":6,"path":"sprites/spr_ui_back/spr_ui_back.yy",},
+    {"name":"spr_ui_box","order":7,"path":"sprites/spr_ui_box/spr_ui_box.yy",},
+    {"name":"spr_ui_button","order":8,"path":"sprites/spr_ui_button/spr_ui_button.yy",},
+    {"name":"spr_ui_check","order":9,"path":"sprites/spr_ui_check/spr_ui_check.yy",},
+    {"name":"spr_ui_icon1","order":10,"path":"sprites/spr_ui_icon1/spr_ui_icon1.yy",},
+    {"name":"spr_ui_icon2","order":11,"path":"sprites/spr_ui_icon2/spr_ui_icon2.yy",},
+    {"name":"spr_ui_icon3","order":12,"path":"sprites/spr_ui_icon3/spr_ui_icon3.yy",},
   ],
 }

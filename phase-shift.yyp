@@ -38,6 +38,8 @@
   "name":"phase-shift",
   "resources":[
     {"id":{"name":"babafont","path":"fonts/babafont/babafont.yy",},},
+    {"id":{"name":"mainmenu_loader","path":"objects/mainmenu_loader/mainmenu_loader.yy",},},
+    {"id":{"name":"obj_button","path":"objects/obj_button/obj_button.yy",},},
     {"id":{"name":"obj_gamerules","path":"objects/obj_gamerules/obj_gamerules.yy",},},
     {"id":{"name":"obj_level_end","path":"objects/obj_level_end/obj_level_end.yy",},},
     {"id":{"name":"obj_moon","path":"objects/obj_moon/obj_moon.yy",},},
@@ -55,6 +57,13 @@
     {"id":{"name":"spr_dev_obstacle_phase_shadow","path":"sprites/spr_dev_obstacle_phase_shadow/spr_dev_obstacle_phase_shadow.yy",},},
     {"id":{"name":"spr_dev_player","path":"sprites/spr_dev_player/spr_dev_player.yy",},},
     {"id":{"name":"spr_moon","path":"sprites/spr_moon/spr_moon.yy",},},
+    {"id":{"name":"spr_ui_back","path":"sprites/spr_ui_back/spr_ui_back.yy",},},
+    {"id":{"name":"spr_ui_box","path":"sprites/spr_ui_box/spr_ui_box.yy",},},
+    {"id":{"name":"spr_ui_button","path":"sprites/spr_ui_button/spr_ui_button.yy",},},
+    {"id":{"name":"spr_ui_check","path":"sprites/spr_ui_check/spr_ui_check.yy",},},
+    {"id":{"name":"spr_ui_icon1","path":"sprites/spr_ui_icon1/spr_ui_icon1.yy",},},
+    {"id":{"name":"spr_ui_icon2","path":"sprites/spr_ui_icon2/spr_ui_icon2.yy",},},
+    {"id":{"name":"spr_ui_icon3","path":"sprites/spr_ui_icon3/spr_ui_icon3.yy",},},
   ],
   "resourceType":"GMProject",
   "resourceVersion":"2.0",
@@ -66,5 +75,6 @@
   "templateType":"game",
   "TextureGroups":[
     {"$GMTextureGroup":"","%Name":"Default","autocrop":true,"border":2,"compressFormat":"bz2","customOptions":"","directory":"","groupParent":null,"isScaled":true,"loadType":"default","mipsToGenerate":0,"name":"Default","resourceType":"GMTextureGroup","resourceVersion":"2.0","targets":-1,},
+    {"$GMTextureGroup":"","%Name":"texturegroup1","autocrop":true,"border":2,"compressFormat":"bz2","customOptions":"","directory":"","groupParent":null,"isScaled":true,"loadType":"default","mipsToGenerate":0,"name":"texturegroup1","resourceType":"GMTextureGroup","resourceVersion":"2.0","targets":-1,},
   ],
 }
