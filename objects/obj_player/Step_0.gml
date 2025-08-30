@@ -3,18 +3,37 @@ var _key_right = keyboard_check(vk_right)|| keyboard_check(ord("D"));
 var _key_up = keyboard_check_pressed(vk_up) || keyboard_check(ord("W"));
 var _key_control = keyboard_check_pressed(vk_control);
 
+
+
+// obj_gamerules.solid_object is an array of solid obstacles; objects the player cannot go through
 var _on_ground = place_meeting(x,y+1,obj_gamerules.solid_objects);
 
 var _direction = _key_right - _key_left;
 
-if changing_phase == true{
-	_direction = 0
+// Is the player touching the level's objective
+var _level_completed = instance_position(x,y,obj_level_end);
+if _level_completed == true
+{
+	_direction = 0;
+	x_spd = 0;
+	y_spd = 0;
 }
 
+// When changing the moon phase, player cannot move
+if changing_phase == true
+{
+	_direction = 0;
+}
+
+// Apply gravity
+if y_spd < y_max_spd
+{
+	y_spd = y_spd + obj_gamerules.y_gravity;
+}
 
 #region CONTROLS & ACTIONS
 
-if _key_up && _on_ground && (!changing_phase)
+if _key_up && _on_ground && !changing_phase
 {
 	y_spd += jump_strength
 }
@@ -26,7 +45,6 @@ if _key_control
 
 if changing_phase
 {
-	
 	if _key_right
 	{
 		obj_gamerules.time+=5
@@ -36,18 +54,21 @@ if changing_phase
 		obj_gamerules.time-=5
 	}
 }
+
 #endregion
 
 #region MOVEMENT
 
-if (_direction != 0) && (x_spd != (_direction*x_max_spd))
+if (_direction != 0) && (x_spd != _direction*x_max_spd) && !_level_completed
 {
 	x_spd += (x_acceleration * _direction)
 }
-else if (_direction == 0) && (x_spd != 0) && _on_ground{
+else if (_direction == 0) && (x_spd != 0) && _on_ground && !_level_completed
+{
 	x_spd -= (x_acceleration * sign(x_spd))
 }
 
+// Checking horizontal movement
 if (place_meeting(x+x_spd, y, obj_gamerules.solid_objects))
 {
 	while (!place_meeting(x+sign(x_spd),y,obj_gamerules.solid_objects))
@@ -57,11 +78,10 @@ if (place_meeting(x+x_spd, y, obj_gamerules.solid_objects))
 	x_spd = 0;
 }
 
-
-y_spd = y_spd + obj_gamerules.y_gravity
+// Checking vertical movement
 if (place_meeting(x, y+y_spd, obj_gamerules.solid_objects))
 {
-	if (!place_meeting(x,y+sign(y_spd),obj_gamerules.solid_objects))
+	while (!place_meeting(x,y+sign(y_spd),obj_gamerules.solid_objects))
 	{
 		y += sign(y_spd);
 	}
@@ -70,7 +90,7 @@ if (place_meeting(x, y+y_spd, obj_gamerules.solid_objects))
 
 #endregion
 
-
+// Update position
 x += x_spd;
 y += y_spd;
 

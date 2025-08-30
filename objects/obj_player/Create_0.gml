@@ -3,9 +3,9 @@ x_acceleration = 0.5;
 x_max_spd = 4;
 
 y_spd = 0;
-y_max_spd = 4;
+y_max_spd = 10;
 
 changing_phase = false
 
-// moving 'up' should always be negative
+// moving up should always be negative
 jump_strength = -7

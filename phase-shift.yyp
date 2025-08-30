@@ -39,14 +39,17 @@
   "resources":[
     {"id":{"name":"babafont","path":"fonts/babafont/babafont.yy",},},
     {"id":{"name":"obj_gamerules","path":"objects/obj_gamerules/obj_gamerules.yy",},},
+    {"id":{"name":"obj_level_end","path":"objects/obj_level_end/obj_level_end.yy",},},
     {"id":{"name":"obj_moon","path":"objects/obj_moon/obj_moon.yy",},},
     {"id":{"name":"obj_obstacle_phase","path":"objects/obj_obstacle_phase/obj_obstacle_phase.yy",},},
     {"id":{"name":"obj_obstacle","path":"objects/obj_obstacle/obj_obstacle.yy",},},
     {"id":{"name":"obj_player","path":"objects/obj_player/obj_player.yy",},},
     {"id":{"name":"titletext","path":"objects/titletext/titletext.yy",},},
+    {"id":{"name":"Level1","path":"rooms/Level1/Level1.yy",},},
+    {"id":{"name":"Level2","path":"rooms/Level2/Level2.yy",},},
     {"id":{"name":"MainMenu","path":"rooms/MainMenu/MainMenu.yy",},},
-    {"id":{"name":"Room1","path":"rooms/Room1/Room1.yy",},},
     {"id":{"name":"RoomUI","path":"roomui/RoomUI/RoomUI.yy",},},
+    {"id":{"name":"spr_dev_level_end","path":"sprites/spr_dev_level_end/spr_dev_level_end.yy",},},
     {"id":{"name":"spr_dev_obstacle_gray","path":"sprites/spr_dev_obstacle_gray/spr_dev_obstacle_gray.yy",},},
     {"id":{"name":"spr_dev_obstacle_orange","path":"sprites/spr_dev_obstacle_orange/spr_dev_obstacle_orange.yy",},},
     {"id":{"name":"spr_dev_obstacle_phase_shadow","path":"sprites/spr_dev_obstacle_phase_shadow/spr_dev_obstacle_phase_shadow.yy",},},
@@ -57,7 +60,8 @@
   "resourceVersion":"2.0",
   "RoomOrderNodes":[
     {"roomId":{"name":"MainMenu","path":"rooms/MainMenu/MainMenu.yy",},},
-    {"roomId":{"name":"Room1","path":"rooms/Room1/Room1.yy",},},
+    {"roomId":{"name":"Level1","path":"rooms/Level1/Level1.yy",},},
+    {"roomId":{"name":"Level2","path":"rooms/Level2/Level2.yy",},},
   ],
   "templateType":"game",
   "TextureGroups":[
