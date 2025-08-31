@@ -38,6 +38,7 @@
     {"name":"spr_dev_obstacle_phase_shadow","order":4,"path":"sprites/spr_dev_obstacle_phase_shadow/spr_dev_obstacle_phase_shadow.yy",},
     {"name":"spr_dev_player","order":1,"path":"sprites/spr_dev_player/spr_dev_player.yy",},
     {"name":"spr_moon","order":2,"path":"sprites/spr_moon/spr_moon.yy",},
+    {"name":"spr_space_background","order":14,"path":"sprites/spr_space_background/spr_space_background.yy",},
     {"name":"spr_ui_back","order":6,"path":"sprites/spr_ui_back/spr_ui_back.yy",},
     {"name":"spr_ui_box","order":7,"path":"sprites/spr_ui_box/spr_ui_box.yy",},
     {"name":"spr_ui_button","order":8,"path":"sprites/spr_ui_button/spr_ui_button.yy",},
