@@ -50,9 +50,9 @@
     {"id":{"name":"tutorialtext","path":"objects/tutorialtext/tutorialtext.yy",},},
     {"id":{"name":"tutorialtext2","path":"objects/tutorialtext2/tutorialtext2.yy",},},
     {"id":{"name":"Level1","path":"rooms/Level1/Level1.yy",},},
-    {"id":{"name":"Level2","path":"rooms/Level2/Level2.yy",},},
     {"id":{"name":"MainMenu","path":"rooms/MainMenu/MainMenu.yy",},},
     {"id":{"name":"Tutorial","path":"rooms/Tutorial/Tutorial.yy",},},
+    {"id":{"name":"Tutorial2","path":"rooms/Tutorial2/Tutorial2.yy",},},
     {"id":{"name":"RoomUI","path":"roomui/RoomUI/RoomUI.yy",},},
     {"id":{"name":"clairdelune","path":"sounds/clairdelune/clairdelune.yy",},},
     {"id":{"name":"clicksound","path":"sounds/clicksound/clicksound.yy",},},
@@ -76,9 +76,9 @@
   "resourceVersion":"2.0",
   "RoomOrderNodes":[
     {"roomId":{"name":"MainMenu","path":"rooms/MainMenu/MainMenu.yy",},},
-    {"roomId":{"name":"Level1","path":"rooms/Level1/Level1.yy",},},
-    {"roomId":{"name":"Level2","path":"rooms/Level2/Level2.yy",},},
     {"roomId":{"name":"Tutorial","path":"rooms/Tutorial/Tutorial.yy",},},
+    {"roomId":{"name":"Tutorial2","path":"rooms/Tutorial2/Tutorial2.yy",},},
+    {"roomId":{"name":"Level1","path":"rooms/Level1/Level1.yy",},},
   ],
   "templateType":"game",
   "TextureGroups":[
