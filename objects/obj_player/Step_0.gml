@@ -2,7 +2,7 @@ var _key_left = keyboard_check(vk_left) || keyboard_check(ord("A"));
 var _key_right = keyboard_check(vk_right)|| keyboard_check(ord("D"));
 var _key_up = keyboard_check_pressed(vk_up) || keyboard_check(ord("W"));
 var _key_control = keyboard_check_pressed(vk_control);
-
+var _key_reset = keyboard_check_pressed(ord("R"));
 
 
 // obj_gamerules.solid_object is an array of solid obstacles; objects the player cannot go through
@@ -76,6 +76,11 @@ if (place_meeting(x+x_spd, y, obj_gamerules.solid_objects))
 		x += sign(x_spd);
 	}
 	x_spd = 0;
+}
+// Reset level
+if (_key_reset)
+{
+room_restart()
 }
 
 // Checking vertical movement

@@ -1,0 +1,1 @@
+displaytext = "press 'R' to restart"

@@ -1,0 +1,1 @@
+displaytext = "ctrl to shift moon phases"

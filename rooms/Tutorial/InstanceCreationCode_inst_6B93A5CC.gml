@@ -1,0 +1,1 @@
+displaytext = "arrow keys or wasd to move"
