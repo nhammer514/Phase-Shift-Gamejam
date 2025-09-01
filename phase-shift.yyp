@@ -49,6 +49,7 @@
     {"id":{"name":"titletext","path":"objects/titletext/titletext.yy",},},
     {"id":{"name":"tutorialtext","path":"objects/tutorialtext/tutorialtext.yy",},},
     {"id":{"name":"tutorialtext2","path":"objects/tutorialtext2/tutorialtext2.yy",},},
+    {"id":{"name":"End","path":"rooms/End/End.yy",},},
     {"id":{"name":"Level1","path":"rooms/Level1/Level1.yy",},},
     {"id":{"name":"MainMenu","path":"rooms/MainMenu/MainMenu.yy",},},
     {"id":{"name":"Tutorial","path":"rooms/Tutorial/Tutorial.yy",},},
@@ -63,6 +64,7 @@
     {"id":{"name":"spr_dev_obstacle_phase_shadow","path":"sprites/spr_dev_obstacle_phase_shadow/spr_dev_obstacle_phase_shadow.yy",},},
     {"id":{"name":"spr_dev_player","path":"sprites/spr_dev_player/spr_dev_player.yy",},},
     {"id":{"name":"spr_moon","path":"sprites/spr_moon/spr_moon.yy",},},
+    {"id":{"name":"spr_night","path":"sprites/spr_night/spr_night.yy",},},
     {"id":{"name":"spr_space_background","path":"sprites/spr_space_background/spr_space_background.yy",},},
     {"id":{"name":"spr_ui_back","path":"sprites/spr_ui_back/spr_ui_back.yy",},},
     {"id":{"name":"spr_ui_box","path":"sprites/spr_ui_box/spr_ui_box.yy",},},
@@ -79,6 +81,7 @@
     {"roomId":{"name":"Tutorial","path":"rooms/Tutorial/Tutorial.yy",},},
     {"roomId":{"name":"Tutorial2","path":"rooms/Tutorial2/Tutorial2.yy",},},
     {"roomId":{"name":"Level1","path":"rooms/Level1/Level1.yy",},},
+    {"roomId":{"name":"End","path":"rooms/End/End.yy",},},
   ],
   "templateType":"game",
   "TextureGroups":[

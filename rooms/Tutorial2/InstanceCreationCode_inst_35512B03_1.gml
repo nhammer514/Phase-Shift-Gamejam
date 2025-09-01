@@ -1,1 +1,1 @@
-specialized_phases = [2]
+specialized_phases = [1]
