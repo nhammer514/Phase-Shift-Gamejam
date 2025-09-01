@@ -13,13 +13,13 @@
 *   [filler]
 
 
-##   /span>  How to Play / Run
+##   How to Play / Run
 1.  **Prerequisites:**
     *   
 2.  **Steps:**
     *   filler
 
-##   /span>   Development Sources & Technologies
+##   Development Sources & Technologies
 
 *   **Engine/Framework:** GameMaker
 *   **Programming Language:** GameMaker Language
@@ -35,7 +35,7 @@
 
 ## 👥 Team & Attributions
 
-*   **[]** - [Your Role/Contribution]
+*   **[Member]** - [Your Role/Contribution]
 
 
 ## 📝 License
