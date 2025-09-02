@@ -104,6 +104,27 @@ switch (state) {
 			if (_key_up && _on_ground) {
 				y_spd = jump_strength;
 			}
+			
+			
+			// Animation
+			if _direction == -1{
+				image_xscale = -1
+			}
+			else if _direction == 1{
+				image_xscale = 1
+			}
+			if _on_ground && abs(x_spd) > 0 {
+				sprite_index = spr_player_moving
+			}
+			else if _on_ground && x_spd == 0{
+				sprite_index = spr_player_idle
+			}
+			if !_on_ground && y_spd <= 0 {
+				sprite_index = spr_player_falling
+			}
+			else if !_on_ground && y_spd > 0{
+				sprite_index = spr_player_jumping
+			}
 		}
 		break;
 		
@@ -142,6 +163,7 @@ if (state != PLAYER_STATE.LEVEL_END) {
 	}
 	y += y_spd;
 }
+
 
 // --- OUT OF BOUNDS ---
 
