@@ -15,3 +15,4 @@ x_acceleration = 0.5;
 jump_strength = -10; // Must be a negative value!
 time_change_speed = 5;
 is_manipulating_time = false;
+has_key = false;
