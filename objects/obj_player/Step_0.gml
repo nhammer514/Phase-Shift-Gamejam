@@ -1,101 +1,117 @@
+// --- INPUT & CACHE VARIABLES ---
+
+// Keyboard input for movement
 var _key_left = keyboard_check(vk_left) || keyboard_check(ord("A"));
-var _key_right = keyboard_check(vk_right)|| keyboard_check(ord("D"));
-var _key_up = keyboard_check_pressed(vk_up) || keyboard_check(ord("W"));
-var _key_control = keyboard_check_pressed(vk_control);
-var _key_reset = keyboard_check_pressed(ord("R"));
+var _key_right = keyboard_check(vk_right) || keyboard_check(ord("D"));
+var _key_up = keyboard_check_pressed(vk_up) || keyboard_check_pressed(ord("W"));
 
+// Keyboard input for time control
+var _key_rewind = keyboard_check(vk_control);
+var _key_fast_forward = keyboard_check(vk_shift);
 
-// obj_gamerules.solid_object is an array of solid obstacles; objects the player cannot go through
-var _on_ground = place_meeting(x,y+1,obj_gamerules.solid_objects);
+// Room variables
+var _room_right = room_width;
+var _room_bottom = room_height;
 
-var _direction = _key_right - _key_left;
-
-// Is the player touching the level's objective
-var _level_completed = instance_position(x,y,obj_level_end);
-if _level_completed == true
-{
-	_direction = 0;
-	x_spd = 0;
-	y_spd = 0;
+// Reset check
+if (keyboard_check_pressed(ord("R"))) {
+	room_restart();
+	exit;
 }
 
-// When changing the moon phase, player cannot move
-if changing_phase == true
-{
-	_direction = 0;
+// Cache variables
+var _solids = obj_gamerules.solid_objects;
+var _gravity = obj_gamerules.y_gravity;
+
+
+// --- LEVEL COMPLETION ---
+
+// This check overrides everything else.
+if (state != PLAYER_STATE.LEVEL_END && instance_exists(instance_position(x, y, obj_level_end))) {
+	state = PLAYER_STATE.LEVEL_END;
 }
 
-// Apply gravity
-if y_spd < y_max_spd
-{
-	y_spd = y_spd + obj_gamerules.y_gravity;
+
+// --- STATE MACHINE LOGIC ---
+
+switch (state) {
+	
+	// == NORMAL STATE ==
+	case PLAYER_STATE.NORMAL:
+		
+		// Time control
+		if (_key_rewind) {
+			x_spd = 0;
+			obj_gamerules.time -= time_change_speed;
+		}
+		else if (_key_fast_forward) {
+			x_spd = 0;
+			obj_gamerules.time += time_change_speed;
+		}
+		else {
+			// --- Default to Normal Movement ---
+			obj_gamerules.time += 0.01;
+			
+			// Moevement
+			var _direction = _key_right - _key_left;
+			
+			if (_direction != 0) {
+				x_spd += _direction * x_acceleration;
+				x_spd = clamp(x_spd, -x_max_spd, x_max_spd);
+			}
+			else {
+				if (abs(x_spd) > x_acceleration) {
+					x_spd -= sign(x_spd) * x_acceleration;
+				} else {
+					x_spd = 0;
+				}
+			}
+
+			// Jumping
+			var _on_ground = place_meeting(x, y + 1, _solids);
+			if (_key_up && _on_ground) {
+				y_spd = jump_strength;
+			}
+		}
+		break;
+		
+	// == LEVEL END STATE ==
+	case PLAYER_STATE.LEVEL_END:
+		x_spd = 0;
+		y_spd = 0;
+		break;
 }
 
-#region CONTROLS & ACTIONS
 
-if _key_up && _on_ground && !changing_phase
-{
-	y_spd += jump_strength
-}
+// --- PHYSICS & COLLISIONS ---
 
-if _key_control
-{
-	changing_phase = !changing_phase
-}
-
-if changing_phase
-{
-	if _key_right
-	{
-		obj_gamerules.time+=5
+if (state != PLAYER_STATE.LEVEL_END) {
+	// Gravity
+	if (y_spd < y_max_spd) {
+		y_spd += _gravity;
 	}
-	if _key_left
-	{
-		obj_gamerules.time-=5
+
+	// Horizontal Collision
+	if (place_meeting(x + x_spd, y, _solids)) {
+		while (!place_meeting(x + sign(x_spd), y, _solids)) {
+			x += sign(x_spd);
+		}
+		x_spd = 0;
 	}
-}
+	x += x_spd;
 
-#endregion
-
-#region MOVEMENT
-
-if (_direction != 0) && (x_spd != _direction*x_max_spd) && !_level_completed
-{
-	x_spd += (x_acceleration * _direction)
-}
-else if (_direction == 0) && (x_spd != 0) && _on_ground && !_level_completed
-{
-	x_spd -= (x_acceleration * sign(x_spd))
-}
-
-// Checking horizontal movement
-if (place_meeting(x+x_spd, y, obj_gamerules.solid_objects))
-{
-	while (!place_meeting(x+sign(x_spd),y,obj_gamerules.solid_objects))
-	{
-		x += sign(x_spd);
+	// Vertical Collision
+	if (place_meeting(x, y + y_spd, _solids)) {
+		while (!place_meeting(x, y + sign(y_spd), _solids)) {
+			y += sign(y_spd);
+		}
+		y_spd = 0;
 	}
-	x_spd = 0;
-}
-// Reset level
-if (_key_reset)
-{
-room_restart()
+	y += y_spd;
 }
 
-// Checking vertical movement
-if (place_meeting(x, y+y_spd, obj_gamerules.solid_objects))
-{
-	while (!place_meeting(x,y+sign(y_spd),obj_gamerules.solid_objects))
-	{
-		y += sign(y_spd);
-	}
-	y_spd = 0;
+// --- OUT OF BOUNDS ---
+
+if (bbox_top > _room_bottom || bbox_bottom < 0 || bbox_right < 0 || bbox_left > _room_right) {
+	room_restart();
 }
-
-#endregion
-
-// Update position
-x += x_spd;
-y += y_spd;
-

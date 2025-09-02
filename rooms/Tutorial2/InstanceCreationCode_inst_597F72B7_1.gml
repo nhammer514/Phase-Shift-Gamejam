@@ -1,1 +1,1 @@
-displaytext = "ctrl to shift moon phases"
+displaytext = "Use ctrl and shift to change moon phases"
