@@ -41,18 +41,47 @@ switch (state) {
 		
 		// Time control
 		if (_key_rewind) {
+			
+			// --- Audio Feedback ---
+			audio_sound_pitch(global.music_id, 0.5);
+			
+			if (!audio_is_playing(snd_time_manipulation)) {
+				audio_play_sound(snd_time_manipulation, 10, true);
+			}
+			
+			// --- Game Logic ---
+			is_manipulating_time = true;
 			x_spd = 0;
 			obj_gamerules.time -= time_change_speed;
 		}
 		else if (_key_fast_forward) {
+			
+			// --- Audio Feedback ---
+			audio_sound_pitch(global.music_id, 1.5);
+			
+			if (!audio_is_playing(snd_time_manipulation)) {
+				audio_play_sound(snd_time_manipulation, 10, true);
+			}
+			
+			// --- Game Logic ---
+			is_manipulating_time = true;
 			x_spd = 0;
 			obj_gamerules.time += time_change_speed;
 		}
 		else {
+			// --- Normal Time ---
+			
+			audio_stop_sound(snd_time_manipulation);
+			
+			if (is_manipulating_time) {
+				audio_sound_pitch(global.music_id, 1); // Set pitch back to normal
+				is_manipulating_time = false;
+			}
+			
 			// --- Default to Normal Movement ---
 			obj_gamerules.time += 0.01;
 			
-			// Moevement
+			// Movement
 			var _direction = _key_right - _key_left;
 			
 			if (_direction != 0) {
@@ -77,6 +106,7 @@ switch (state) {
 		
 	// == LEVEL END STATE ==
 	case PLAYER_STATE.LEVEL_END:
+		audio_stop_sound(snd_time_manipulation);
 		x_spd = 0;
 		y_spd = 0;
 		break;

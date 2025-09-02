@@ -28,6 +28,8 @@
     *   Night Background: https://free-game-assets.itch.io/free-sky-with-clouds-background-pixel-art-set
 *   **Sound Assets:**
     *   "Clair De Lune" by Claude Debussy
+	*    Chillpeach - Gameplay
+	*    Pixabay free sound effects
 *   **Inspiration/References:**
     *   filler
 *   **Libraries/Tools:**

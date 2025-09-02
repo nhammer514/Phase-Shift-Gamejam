@@ -2,9 +2,6 @@
 var room_center_x = room_width / 2;
 var room_center_y = room_height / 2;
 
-// Play Music
-audio_play_sound(clairdelune,1,true);
-
 // Play button
 var b = instance_create_layer(room_center_x, room_center_y - 100, "Instances_1", obj_button);
 b.button_text = "Play";

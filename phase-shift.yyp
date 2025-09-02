@@ -57,6 +57,7 @@
     {"id":{"name":"RoomUI","path":"roomui/RoomUI/RoomUI.yy",},},
     {"id":{"name":"clairdelune","path":"sounds/clairdelune/clairdelune.yy",},},
     {"id":{"name":"clicksound","path":"sounds/clicksound/clicksound.yy",},},
+    {"id":{"name":"snd_time_manipulation","path":"sounds/snd_time_manipulation/snd_time_manipulation.yy",},},
     {"id":{"name":"spr_button_mask","path":"sprites/spr_button_mask/spr_button_mask.yy",},},
     {"id":{"name":"spr_dev_level_end","path":"sprites/spr_dev_level_end/spr_dev_level_end.yy",},},
     {"id":{"name":"spr_dev_obstacle_gray","path":"sprites/spr_dev_obstacle_gray/spr_dev_obstacle_gray.yy",},},

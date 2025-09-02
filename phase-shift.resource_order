@@ -33,6 +33,7 @@
     {"name":"Tutorial3","order":2,"path":"rooms/Tutorial3/Tutorial3.yy",},
     {"name":"RoomUI","order":16,"path":"roomui/RoomUI/RoomUI.yy",},
     {"name":"clicksound","order":1,"path":"sounds/clicksound/clicksound.yy",},
+    {"name":"snd_time_manipulation","order":2,"path":"sounds/snd_time_manipulation/snd_time_manipulation.yy",},
     {"name":"spr_button_mask","order":13,"path":"sprites/spr_button_mask/spr_button_mask.yy",},
     {"name":"spr_dev_level_end","order":5,"path":"sprites/spr_dev_level_end/spr_dev_level_end.yy",},
     {"name":"spr_dev_obstacle_gray","order":3,"path":"sprites/spr_dev_obstacle_gray/spr_dev_obstacle_gray.yy",},
