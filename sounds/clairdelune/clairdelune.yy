@@ -9,7 +9,7 @@
   "bitRate":128,
   "compression":0,
   "conversionMode":0,
-  "duration":311.21704,
+  "duration":0.0,
   "name":"clairdelune",
   "parent":{
     "name":"Sounds",

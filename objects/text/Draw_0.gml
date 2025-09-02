@@ -10,5 +10,4 @@ var y_scale = 2;
 
 // draw text
 draw_set_alpha(0.5)
-draw_text_transformed(center_x, center_y + 40, displaytext,x_scale, y_scale, 0);
-
+draw_text_transformed(center_x, center_y - 40, displaytext,x_scale, y_scale, 0);

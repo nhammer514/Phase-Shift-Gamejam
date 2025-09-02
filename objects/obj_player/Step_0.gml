@@ -28,6 +28,7 @@ var _gravity = obj_gamerules.y_gravity;
 
 // This check overrides everything else.
 if (state != PLAYER_STATE.LEVEL_END && instance_exists(instance_position(x, y, obj_level_end))) {
+	audio_play_sound(clicksound, 5, false)
 	state = PLAYER_STATE.LEVEL_END;
 }
 
@@ -52,6 +53,7 @@ switch (state) {
 			// --- Game Logic ---
 			is_manipulating_time = true;
 			x_spd = 0;
+			y_spd = 0;
 			obj_gamerules.time -= time_change_speed;
 		}
 		else if (_key_fast_forward) {
@@ -66,6 +68,7 @@ switch (state) {
 			// --- Game Logic ---
 			is_manipulating_time = true;
 			x_spd = 0;
+			y_spd = 0;
 			obj_gamerules.time += time_change_speed;
 		}
 		else {
@@ -117,7 +120,7 @@ switch (state) {
 
 if (state != PLAYER_STATE.LEVEL_END) {
 	// Gravity
-	if (y_spd < y_max_spd) {
+	if (y_spd < y_max_spd) && !is_manipulating_time{
 		y_spd += _gravity;
 	}
 
